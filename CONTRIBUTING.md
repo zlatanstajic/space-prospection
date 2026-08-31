@@ -1,0 +1,10 @@
+# Contributing
+
+Contributions are welcome. To propose a change:
+
+1. **Fork and branch.** Fork the repository, then create a branch off `master`. Use a short, kebab-case branch name that describes the change (for example, `issues/12-improve-contact-form`).
+2. **Set up the project.** Follow the local installation instructions in [README.md](README.md), then run `make check` and `make setup`. Keep email credentials, `EMAIL_ADMIN`, production overrides, and other machine-specific configuration out of version control.
+3. **Work within the existing structure.** Page actions belong in [`application/controllers/`](application/controllers/), database queries in [`application/models/`](application/models/), page markup in [`application/views/`](application/views/), and browser assets in [`assets/`](assets/). Do not edit [`system/`](system/), which is an unmodified CodeIgniter 3.1.13 distribution. Update both the SQLite database and its matching file in [`.extras/sql/`](.extras/sql/) when changing schema or seed data.
+4. **Match conventions.** Follow the style of neighboring files and the rules in [`.extras/phpcs.xml`](.extras/phpcs.xml): four-space indentation, braces on their own lines, uppercase `TRUE`, `FALSE`, and `NULL`, long `array()` syntax, `snake_case` methods, and docblocks on class properties and methods. Escape rendered data, keep queries in `Website_Model`, and pass view data from the controller.
+5. **Test before submitting.** Add or update PHPUnit coverage for behavioral changes. Run the smallest affected test first, then run the complete quality suite with `make test`. The full suite runs PHP_CodeSniffer followed by PHPUnit. Use PHP 8.1 for PHPUnit because later PHP versions emit framework deprecations from CodeIgniter 3.1.13.
+6. **Open a pull request.** Push your branch and open a PR against `master` with a clear description of what changed, why it changed, and how it was tested. Open an issue first for larger changes or changes that affect the project architecture.

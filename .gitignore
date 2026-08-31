@@ -1,0 +1,31 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+/.build
+/dist
+/tmp
+/out-tsc
+
+# Custom
+.vscode
+/application/config/production
+
+# Installed by 'make setup'
+/application/vendor
+/application/tests/*
+!/application/tests/controllers/
+!/application/tests/models/
+/application/tests/controllers/*
+!/application/tests/controllers/index.html
+!/application/tests/controllers/*_Test.php
+/application/tests/models/*
+!/application/tests/models/.gitkeep
+!/application/tests/models/index.html
+!/application/tests/models/*_Test.php
+
+# Generated at runtime
+/application/logs/log-*.php
+
+# System Files
+.DS_Store
+Thumbs.db
